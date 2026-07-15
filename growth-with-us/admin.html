@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Growth With Us</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="robots" content="noindex">
+</head>
+<body>
+
+<div class="brand-row">
+  <div class="brand">🌱 Growth <span>With Us</span></div>
+  <div class="tagline">ruang caretakers</div>
+</div>
+
+<div class="wrap">
+  <div class="page-header">
+    <span class="eyebrow">khusus caretakers</span>
+    <h1>Admin Panel</h1>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="login-section" class="packet" style="max-width:380px; margin:0 auto;">
+    <h2 class="center">Login</h2>
+    <form id="login-form">
+      <label for="admin-email">Email</label>
+      <input type="email" id="admin-email" required>
+      <label for="admin-password" style="margin-top:12px;">Password</label>
+      <input type="password" id="admin-password" required>
+      <div class="center" style="margin-top:16px;">
+        <button type="submit" class="btn">Masuk</button>
+      </div>
+      <div id="login-error" class="msg error center" style="display:none;"></div>
+    </form>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard-section" style="display:none;">
+    <div class="center" style="margin-bottom:20px;">
+      <button id="logout-btn" class="btn outline">Logout</button>
+    </div>
+
+    <div class="packet">
+      <span class="badge">❓ Kotak Pertanyaan (QnA)</span>
+      <h2>Pertanyaan Masuk</h2>
+      <div id="questions-list"></div>
+    </div>
+
+    <div class="divider-leaf">🌿</div>
+
+    <div class="packet">
+      <span class="badge">🌻 Kelola Member</span>
+      <h2>Tambah / Update Member</h2>
+      <form id="member-form">
+        <label for="m-username">Username (harus sama dengan yang dipakai member login)</label>
+        <input type="text" id="m-username" required>
+
+        <label for="m-nama" style="margin-top:12px;">Nama Sayur/Benih</label>
+        <input type="text" id="m-nama">
+
+        <label for="m-jenis" style="margin-top:12px;">Jenis (misal: Sayuran / Benih)</label>
+        <input type="text" id="m-jenis">
+
+        <label for="m-emoji" style="margin-top:12px;">Emoji (opsional)</label>
+        <input type="text" id="m-emoji" placeholder="🥕">
+
+        <label for="m-joined" style="margin-top:12px;">Tanggal Bergabung</label>
+        <input type="text" id="m-joined" placeholder="dd/mm/yyyy">
+
+        <label for="m-catatan" style="margin-top:12px;">Catatan (opsional, tampil di ID card)</label>
+        <textarea id="m-catatan" rows="2"></textarea>
+
+        <div class="center" style="margin-top:16px;">
+          <button type="submit" class="btn">Simpan Member</button>
+        </div>
+      </form>
+
+      <h3 style="margin-top:26px;">Daftar Member</h3>
+      <div id="members-list"></div>
+    </div>
+  </div>
+</div>
+
+<footer>dari kami, untuk yang lagi sama-sama tumbuh 🌱</footer>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>
